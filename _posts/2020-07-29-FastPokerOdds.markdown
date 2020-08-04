@@ -5,7 +5,7 @@ title: Insights on Mobile App Development and Poker Combinatorics
 permalink: InsightsAndCombinatorics
 ---
 
-![](/assets/InsightsPost2020/00-title.png)
+![](/FastPokerOdds/assets/InsightsPost2020/00-title.png)
 
 
 Summary: I developed a Poker Odds Calculator App ([download on the iOS app store](/download/)) and wrote this post to present some insights and details of its development, as well as some Poker-related combinatory facts.
@@ -20,7 +20,7 @@ A few months ago, I got back to playing online Texas Hold'em Poker. I noticed my
 In this decade-long era of "there's an app for that", I searched for a mobile application that would do the math for me. The idea is: I'd present the app with the current state of the table (my cards, the community cards and the number of players active in that table) and the app would spit out the odds of me winning that particular table at that moment (see the visual representation example below).
 
 
-![](/assets/InsightsPost2020/01-example.png)
+![](/FastPokerOdds/assets/InsightsPost2020/01-example.png)
 
 
 There are a few solutions on the iOS App Store and Google Play Store. However, they all have usability downsides which bear them unfit as a helper tool in an online poker match. Some matches give you no more than 20 seconds to decide your next move, so an app journey cannot be slower than that.
@@ -44,7 +44,7 @@ As simple as it may sound, there are only two main requirements for a well-built
 Imagine the following scenario: 3 players are active. You are player 1 and you know the cards of player 2, but you don't know the cards of player 3. You're on the pre-flop stage (no community cards are shown yet):
 
 
-<p align="center"><img width="350" src="/assets/InsightsPost2020/02-example.png"></p>
+<p align="center"><img width="350" src="/FastPokerOdds/assets/InsightsPost2020/02-example.png"></p>
 
 
 How do you code an app that calculates your odds of winning at this point? The answer may seem obvious at first. Your intuitive response might be "make the app loop through all remaining possibilities and check how many times player 1 wins".
@@ -53,13 +53,13 @@ How do you code an app that calculates your odds of winning at this point? The a
 However, bear in mind that there are nearly 150 nonillion (150 followed by 30 zeroes) possible 9-player table card combinations (excluding inner permutations). We couldn't possibly run them all.
 
 
-![](/assets/InsightsPost2020/03-totalPokerCombins.png)
+![](/FastPokerOdds/assets/InsightsPost2020/03-totalPokerCombins.png)
 
 
 **Solution:** rather than exploring all 150 nonillion possibilities (which would take more time than the universe's age), we could loop through a smaller sample of possibilities, randomly placing cards on the remaining slots and evaluating which player wins each random match. This approach, known as a **Monte Carlo Method**, is broadly used in physics, engineering, economics, banking and other areas:
 
 
-![](/assets/InsightsPost2020/04-results.png)
+![](/FastPokerOdds/assets/InsightsPost2020/04-results.png)
 
 
 Monte Carlo is a method based on the **Law of Large Numbers**, which states that, for a sufficiently large sample of events (event example: random simulations of a poker match), the perceived frequency of occurrences of an outcome (outcome example: player 1 wins) will approximate the theoretical probability of that outcome happening. One easy way to visualize the law of large numbers at play is to roll 100,000 dices (don't do that) and sum the number of times that the number 6 appears. You might not get exactly 16,667 appearances (the theoretical expected value), but the real number will be fairly close to it. Another way of observing the Law of Large Numbers is to play with a [Galton Board](https://www.youtube.com/watch?v=EvHiee7gs9Y), an office table toy which uses small pins to distribute marbles in a random, yet ordered manner.
@@ -68,7 +68,7 @@ Monte Carlo is a method based on the **Law of Large Numbers**, which states that
 At this point, you might be wondering: "100,000 samples is **too small** when compared to the original 150 nonillions, right? How large of a random sample is reliable enough?". Surprisingly, not much. A convergence test shows that the margin of error gets sufficiently small (below 2%) with as little as 2,000 simulations. Beyond 10,000 the margin is lower than 1%.
 
 
-<p align="center"><img width="500" src="/assets/InsightsPost2020/05-convergence.png"></p>
+<p align="center"><img width="500" src="/FastPokerOdds/assets/InsightsPost2020/05-convergence.png"></p>
 
 
 There is no need to go past 10,000 simulations, as the accuracy gain is asymptotic-logarithmic and the decision-making process certainly won't change due to small fluctuations between 10,000 and 100,000 simulations. It is wiser to sacrifice 0.5% of margin to have an app that is 10 times faster.
@@ -94,7 +94,7 @@ Explaining the basic rules of Texas Hold'em Poker to a person is simple. Of cour
 * There are nine possible 5-card hands ranked by strength. There are tie breakers within the hand combinations based on the highest cards A > K > Q > J > T > 9 > 8 > 7 > 6 > 5 > 4 > 3 > 2:
 
 
-![](/assets/InsightsPost2020/06-hands.png)
+![](/FastPokerOdds/assets/InsightsPost2020/06-hands.png)
 
 
 The table above is fairly easy for a human to interpret and use when evaluating their hands. When programming an App to do the same task, it gets more complicated:
@@ -106,7 +106,7 @@ The table above is fairly easy for a human to interpret and use when evaluating 
 The easiest way of programming a 5-card hand score is by evaluating it from the highest possible combination (Straight Flush) to the lowest (no combination):
 
 
-![](/assets/InsightsPost2020/07-flow.png)
+![](/FastPokerOdds/assets/InsightsPost2020/07-flow.png)
 
 
 An in-depth view of a hand strength scoring algorithm can be seen [here](http://www.mathcs.emory.edu/~cheung/Courses/170/Syllabus/10/pokerCheck.html).
@@ -130,13 +130,13 @@ There are 311,875,200 possible 5-card combinations. Excluding permutations (5! =
 Take a look at the combinations below. They are different from one another. However, they still have the same strength (pair of aces, 10-5-3 kickers), thus they have the same score:
 
 
-![](/assets/InsightsPost2020/08-equivalence.png)
+![](/FastPokerOdds/assets/InsightsPost2020/08-equivalence.png)
 
 
 This shows something interesting: even though there are 2,598,960 different hand combinations, they all collapse into a much smaller number of hand scores. Once again, combinatorics surprises us and tells us that this final number is only 7,462.
 
 
-<p align="center"><img width="350" src="/assets/InsightsPost2020/09-scoreRank.png"></p>
+<p align="center"><img width="350" src="/FastPokerOdds/assets/InsightsPost2020/09-scoreRank.png"></p>
 
 
 The next step is to create a "hash" function that will translate all 2,598,960 hand combinations into only 7,462 without spending too much computing time. Otherwise, we would still take too long to apply this method in the Monte Carlo algorithm. To solve this issue, the app uses the cleverness of [this guy](http://suffe.cool/poker/evaluator.html), which uses a neat encoding trick with prime number correspondence and multiplications.
@@ -161,7 +161,7 @@ The main drivers behind this app's interface design are:
 After some dozen hours deep diving into online courses in app development, vector graphics and design ([iOS13 & Swift 5 course](https://www.udemy.com/course-dashboard-redirect/?course_id=1778502) / [Adobe XD course](https://www.udemy.com/course/curso-de-adobe-xd/learn/)) and another 100+ hours coding and setting up the layout, the main screens of the app were developed. Aiming for simplicity, the app has as little views as possible:
 
 
-![](/assets/InsightsPost2020/10-appScreens.png)
+![](/FastPokerOdds/assets/InsightsPost2020/10-appScreens.png)
 
 
 * **View 1**: main dashboard. Contains the player's cards, enable/disable buttons, win rate labels, calculate button etc.
@@ -179,7 +179,7 @@ After some dozen hours deep diving into online courses in app development, vecto
 After 3 weeks of development + 1 week of bureaucracy, the app is active and running on the iOS App Store ([iPhone link](http://127.0.0.1:4000/privacy-policy-iPhone/)).
 
 
-![](/assets/InsightsPost2020/11-appStoreScreen.png)
+![](/FastPokerOdds/assets/InsightsPost2020/11-appStoreScreen.png)
 
 
 Surprisingly, the step I believed would be the hardest - programming all poker-related algorithms - was the easiest of the entire project, whereas the steps I thought would be easier - layouts, UI design, app store submission and bureaucracy - turned out to be the most tiresome.
@@ -197,7 +197,7 @@ Use the right tools for the right tasks: Apple's Xcode is a great coding platfor
 ## Next steps
 
 
-![](/assets/InsightsPost2020/12-iPadDev.png)
+![](/FastPokerOdds/assets/InsightsPost2020/12-iPadDev.png)
 
 
 I am currently working on an iPad version, which leverages on its bigger screen size to reduce the number of screens and steps needed to calculate the odds. I expect it to be available on the App store mid-August.
