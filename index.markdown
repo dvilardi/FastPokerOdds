@@ -28,7 +28,7 @@ author: Danilo Vilardi
 * **Full-board** card selection
 * **Range map** for reliable odds evaluation for each player
 * **In-depth** player hand statistics
-* **Free** with zero in-app purchases
+* **One-time purchase**
 * **Download (iPad-soon)
 
 ----
