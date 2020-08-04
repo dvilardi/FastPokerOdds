@@ -29,7 +29,7 @@ author: Danilo Vilardi
 * **Range map** for reliable odds evaluation for each player
 * **In-depth** player hand statistics
 * **One-time purchase**
-* **Download (iPad-soon)
+* **Download (iPad-soon)**
 
 ----
 
