@@ -9,5 +9,10 @@ permalink: /download/
 * [iPhone](https://apps.apple.com/app/apple-store/id1524398420?pt=121864549&ct=ghp&mt=8)
 * [iPad](https://apps.apple.com/app/apple-store/id1526255067?pt=121864549&ct=ghp&mt=8)
 
-![](/assets/HomePage/iPadAppScreens.png)
+----
+<br>
 ![](/assets/HomePage/iPhoneAppScreens.png)
+<br>
+![](/assets/HomePage/iPadAppScreens.png)
+<br>
+----
