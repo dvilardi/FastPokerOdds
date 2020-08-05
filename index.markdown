@@ -7,7 +7,7 @@ author: Danilo Vilardi
 
 # Fast Poker Odds Calculator
 
-Fast Poker Odds Calculator is, by far, the easiest poker calculator on the App store. Get it free for iPhone or with a one-time purchase on iPad. ZERO in-app purchases!
+Fast Poker Odds Calculator is, by far, the easiest poker calculator on the App store. Get it free on iPhone or with a one-time purchase on iPad. ZERO in-app purchases!
 
 ----
 
