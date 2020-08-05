@@ -28,8 +28,10 @@ author: Danilo Vilardi
 
 ----
 <br>
-![](/assets/HomePage/iPadAppScreens.png)
 ![](/assets/HomePage/iPhoneAppScreens.png)
-
+<br>
+![](/assets/HomePage/iPadAppScreens.png)
+<br>
+----
 
 
