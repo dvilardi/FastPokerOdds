@@ -4,7 +4,10 @@ title: Download
 permalink: /download/
 ---
 
-Download on the iOS app store:
+# Download on the iOS app store:
 
-* [iPhone](https://apps.apple.com/app/apple-store/id1524398420?pt=121864549&ct=GitHubPages&mt=8)
-* [iPad (soon)](https://apps.apple.com/app/apple-store/id1524398420?pt=121864549&ct=GitHubPages&mt=8) 
+* [iPhone](https://apps.apple.com/app/apple-store/id1524398420?pt=121864549&ct=ghp&mt=8)
+* [iPad](https://apps.apple.com/app/apple-store/id1526255067?pt=121864549&ct=ghp&mt=8)
+
+![](/assets/HomePage/iPadAppScreens.png)
+![](/assets/HomePage/iPhoneAppScreens.png)
