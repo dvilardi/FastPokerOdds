@@ -27,11 +27,17 @@ author: Danilo Vilardi
 * **[Download now (iPad)](https://apps.apple.com/app/apple-store/id1526255067?pt=121864549&ct=ghp&mt=8)**
 
 ----
+
 <br>
+
 ![](/assets/HomePage/iPhoneAppScreens.png)
+
 <br>
+
 ![](/assets/HomePage/iPadAppScreens.png)
+
 <br>
+
 ----
 
 
