@@ -11,8 +11,8 @@ Fast Poker Odds Calculator is, by far, the easiest poker calculator on the App s
 
 ----
 
-# [Download on iPhone (link)](https://apps.apple.com/app/apple-store/id1524398420?pt=121864549&ct=ghp&mt=8)
-# [Download on iPad (link)](https://apps.apple.com/app/apple-store/id1526255067?pt=121864549&ct=ghp&mt=8)
+## [Download on iPhone (link)](https://apps.apple.com/app/apple-store/id1524398420?pt=121864549&ct=ghp&mt=8)
+## [Download on iPad (link)](https://apps.apple.com/app/apple-store/id1526255067?pt=121864549&ct=ghp&mt=8)
 
 * **Win-tie-loss** probabilities for up to 9 players
 * **Evaluate** your odds of winning the table
